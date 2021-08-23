@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.issue {
+  grid-template-columns: 1fr;
+}
+
+@media screen and (min-width: 678px){
+.issue {
+  grid-template-columns: 1fr .5fr;
+}
+}
+
+article {
+  min-width: 300px;
+}
