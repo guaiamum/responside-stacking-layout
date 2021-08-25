@@ -3,15 +3,27 @@
 @tailwind utilities;
 
 .issue {
-  grid-template-columns: 1fr;
+  margin: 0 auto;
+  max-width: 1280px;
+  grid-template-areas: 'a'
+                      'b'
+                      'c';
 }
 
-@media screen and (min-width: 678px){
-.issue {
-  grid-template-columns: 1fr .5fr;
-}
+@media screen and (min-width: 768px){
+  .issue {
+    grid-template-areas: 'a b'
+                        'c b';
+    grid-template-columns: 1fr 320px;
+  }
 }
 
+.issue > *:first-child {
+  grid-area: a;
+}
+.issue > *:nth-child(2) {
+  grid-area: b;
+}
 article {
   min-width: 300px;
 }

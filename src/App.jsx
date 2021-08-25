@@ -48,7 +48,7 @@ const questionIcon = (
 // *************
 
 const Article = ({ title, icon, iconColor = "blue", children }) => (
-  <article className="min-h-50vh p-4">
+  <article className="min-h-50vh p-4" id={title}>
     <h2 className="inline-flex gap-1 items-center text-xl font-medium">
       {icon && <span className={`text-${iconColor}-500`}>{icon}</span>}
       {title}
@@ -75,7 +75,7 @@ export default function App() {
           laboris qui duis commodo enim ad culpa.
         </Article>
         <Article title="Details" icon={questionIcon} iconColor="gray">
-          <p className="min-h-screen border-l-2">
+          <p className="min-h-screen bg-gray-200">
             <strong>I should be on the side view. Only bigger screens.</strong>
             Dolor pariatur in laborum ut labore laboris ex id excepteur
             incididunt. Laboris esse cillum sit ea ullamco amet dolore ullamco.
