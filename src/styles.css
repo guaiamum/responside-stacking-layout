@@ -5,17 +5,17 @@
 .issue {
   margin: 0 auto;
   max-width: 1280px;
-  grid-template-areas: 'a'
-                      'b'
-                      'c';
+  grid-template-areas:
+    "a"
+    "b"
+    "c";
 }
 
-@media screen and (min-width: 768px){
-  .issue {
-    grid-template-areas: 'a b'
-                        'c b';
-    grid-template-columns: 1fr 320px;
-  }
+.issue-desktop {
+  grid-template-areas:
+    "a b"
+    "c b";
+  grid-template-columns: 1fr 320px;
 }
 
 .issue > *:first-child {
@@ -26,4 +26,14 @@
 }
 article {
   min-width: 300px;
+}
+
+/*  */
+#root {
+  display: flex;
+}
+.issue-list {
+  min-width: 200px;
+  min-height: 100vh;
+  background-color: antiquewhite;
 }
