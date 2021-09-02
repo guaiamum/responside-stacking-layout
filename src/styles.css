@@ -2,6 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+--body-vertical-margin: 1rem
+}
+body {
+  margin: var(--body-vertical-margin) 1rem;
+  background-color: #b8b8b8;
+}
+
+/* Issue Details */
 .issue {
   margin: 0 auto;
   max-width: 1280px;
@@ -18,20 +27,19 @@
   grid-template-columns: 1fr 320px;
 }
 
-.issue > *:first-child {
-  grid-area: a;
-}
 .issue > *:nth-child(2) {
   grid-area: b;
 }
-article {
-  min-width: 300px;
+
+
+/* APP container (layout?) */
+@screen md {
+  .app-container {
+    max-height: calc(100vh - 2 * var(--body-vertical-margin));
+  }
 }
 
-/*  */
-#root {
-  display: flex;
-}
+/* Isuue list containerß */
 .issue-list {
   min-width: 200px;
   min-height: 100vh;
